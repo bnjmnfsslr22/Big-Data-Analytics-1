@@ -112,3 +112,60 @@ Nach der Analyse der Daten mit Spark sollten Sie Aussagen über die beiden Daten
 Verwenden Sie die im Notebook bereitgestellten Code-Schnipsel, um den Spark Context zu erzeugen.
 
 # Project-4
+# Praktikum Aufgabe 4 - DataFrames mit Iris-Datensatz
+# Überblick
+
+In diesem Projekt erarbeiten wir uns Kenntnisse zum Arbeiten mit DataFrames mithilfe von Pandas und dem bekannten Iris-Datensatz. Wir fokussieren uns auf das Einlesen von Daten in einen DataFrame, die Erstellung grundlegender Statistiken sowie die visuelle Darstellung des Datensatzes. Darüber hinaus ziehen wir Schlussfolgerungen bezüglich einer möglichen Klassifikation der Daten.
+Projektstruktur
+
+Das Projekt ist strukturiert wie folgt:
+
+    Aufgabe 4: Einlesen von Daten in einen Pandas DataFrame.
+    Aufgabe 4.2: Laden des Iris-Datensatzes und Ausgabe grundlegender Statistiken.
+    Aufgabe 4.3: Visualisierung des Datensatzes durch:
+        Scattermatrix (mittels des Python-Pakets matplotlib)
+        Boxplots für die einzelnen Spalten des Datensatzes
+    Aufgabe 4.4: Schlussfolgerungen aus den Daten und deren Visualisierungen für eine mögliche Klassifikation.
+
+# Installationsanforderungen
+
+Das Projekt ist in Python geschrieben und verwendet die Bibliotheken Pandas, Matplotlib und Seaborn. Um den Code auszuführen, benötigen Sie eine Umgebung mit diesen Bibliotheken.
+
+# Wie man es benutzt
+
+Das Jupyter Notebook enthält ausführbaren Code und Markdown-Kommentare zur Erläuterung. Die Daten werden aus dem Verzeichnis Big_Data_Analytics_1/datasets/iris/* gelesen. Sie können den Code direkt im Jupyter Notebook ausführen.
+
+# Aufgabe 4.2
+
+Nach dem Einlesen des Iris-Datensatzes in einen DataFrame geben wir grundlegende Statistiken wie Zählung, Mittelwert, Standardabweichung, Minimum, 25%, 50%, 75% und Maximum für jede Spalte aus.
+
+import pandas as pd
+
+data = pd.read_csv('../Big_Data_Analytics_1/datasets/iris/data.all', sep='\s+', header=None)
+data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
+data.describe()
+
+# Aufgabe 4.3
+
+Wir visualisieren den Datensatz sowohl als Scattermatrix als auch als Boxplots für jede Spalte des Datensatzes.
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Scattermatrix
+sns.pairplot(data, hue='class')
+plt.show()
+
+# Boxplots
+for column in data.columns[:-1]:
+    sns.boxplot(x='class', y=column, data=data)
+    plt.show()
+
+# Aufgabe 4.4
+
+Aus den Daten und deren Visualisierungen ziehen wir Schlüsse hinsichtlich einer möglichen Klassifikation der Daten, z. B. Unterschiede in petal_length und petal_width der verschiedenen Iris-Arten oder die hohe Korrelation zwischen diesen beiden Merkmalen.
+
+correlation_matrix = data.corr()
+sns.heatmap(correlation_matrix, annot=True)
+plt.title('Correlation matrix of Iris dataset')
+plt.show()
