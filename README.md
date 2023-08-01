@@ -1,6 +1,6 @@
 # Big Data Analytics
 
-## Dieses Repository enthält vier Hauptprojekte, die verschiedene Aspekte der Big Data Analyse adressieren. Jedes Projekt verwendet Python und spezielle Big Data Tools und Bibliotheken.
+### Dieses Repository enthält vier Hauptprojekte, die verschiedene Aspekte der Big Data Analyse adressieren. Jedes Projekt verwendet Python und spezielle Big Data Tools und Bibliotheken.
 ## Inhaltsverzeichnis
 
     Projekt 1: Map-Reduce Zahlenzähler
