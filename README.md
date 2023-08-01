@@ -2,10 +2,10 @@
 Dieses Repository enthält eine Reihe von Python-Programmen, die für verschiedene Big-Data-Analytics-Aufgaben erstellt wurden.
 
 # Inhaltsverzeichnis
-1. Project-1
-2. Project-2
-3. prjoect-3
-4. project-4
+1. Project-1-Map-reduce zahlenzähler
+2. Project-2-Abfragen mit Apache Drill
+3. Prjoect-3-Abfragen mit Apache Spark
+4. Project-4-DataFrames mit Iris-Datensatz
 
 
 # Project-1
