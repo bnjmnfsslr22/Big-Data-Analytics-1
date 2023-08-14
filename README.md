@@ -19,7 +19,7 @@ Um das Projekt auszuführen, benötigen Sie ein Jupyter Notebook und die folgend
 Dieses Projekt implementiert die Map-Reduce Logik, um eine große CSV-Datei zu analysieren, die Häufigkeit jeder Zahl zu zählen und die Ergebnisse zu visualisieren.
 ## Ausführung
 
-Ändern Sie den Dateipfad entsprechend, um eine andere Datei zu verwenden.
+Es wurde ein Datensatz verwendet, der nicht mir gehört dementsprechend wird er nicht zur Verfügung gestellt. Um das Programm auszuführen bräucte man einen eigenen Datensatz
 # Projekt 2: Abfragen mit Apache Drill
 
 Dieses Projekt setzt Apache Drill ein, um SQL-Abfragen auf verschiedene Datensätze auszuführen und die Ergebnisse zu analysieren.
